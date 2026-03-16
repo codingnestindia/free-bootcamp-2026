@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.bg-color {
+    background: linear-gradient(45deg, rgb(37, 108, 231), rgb(202, 71, 202));
+}
+
+.max-width {
+    width: 400px;
+}
+
+.min-height {
+    min-height: 300px;
+}
+.delete-btn{
+  transition: all 0.3s ease;
+}
+.delete-btn:hover{
+  box-shadow: 0 0 10px rgba(255,0,0,0.6);
+  transform: scale(1.1);
+}
