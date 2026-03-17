@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.bg-gradient-icon{
+    background: linear-gradient(to right , rgb(34, 34, 252),rgb(129, 24, 216));
+}
+.text-purple{
+    color: rgb(153, 63, 227);
+}
+.tet-orange{
+    color: rgb(251, 186, 44);
+}
