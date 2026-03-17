@@ -16,10 +16,24 @@
 .min-height {
     min-height: 300px;
 }
-.delete-btn{
-  transition: all 0.3s ease;
+
+.delete-btn {
+    transition: all 0.3s ease;
 }
-.delete-btn:hover{
-  box-shadow: 0 0 10px rgba(255,0,0,0.6);
-  transform: scale(1.1);
+
+.delete-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    transform: scale(1.1);
+}
+ .category-chip {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.default-items{
+    text-align: center;
+    padding: 20px;
+    color: gray;
+    font-size: 1rem;
 }
