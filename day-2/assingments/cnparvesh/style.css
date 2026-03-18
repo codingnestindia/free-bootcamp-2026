@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.heading {
+  text-align: center;
+  padding: 40px;
+}
+.icon {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #7b61ff, #5f9cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.summery-box {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.result-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #7b61ff, #a855f7);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+.big-icon {
+  font-size: 40px;
+  color: #bbb;
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container heading">
+      <div class="icon">
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <h1 class="fw-bold">AI Article Summarizer</h1>
+      <p class="text-muted">
+        Transform long articles into concise summaries with AI-powered
+        technology
+      </p>
+    </div>
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- LEFT -->
+        <div class="col-6">
+          <div class="card p-4 shadow-sm h-100">
+            <h5 class="mb-3">
+              <i class="fa-brands fa-dochub"></i>
+              Original Article
+            </h5>
+
+            <label class="form-label">Paste your article here</label>
+            <textarea
+              id="inputText"
+              class="form-control mb-2 bg-light"
+              rows="10"
+              placeholder="Paste a long article, blog post, or any text..."
+            ></textarea>
+
+            <p id="Count" class="text-muted">0 words</p>
+
+            <!-- Summery -->
+            <div class="mt-3">
+              <label class="form-label">Summary Length</label>
+
+              <div class="summery-box">
+                <input class="mt-2" type="radio" name="length" checked />
+                <div>
+                  <h6>Short</h6>
+                  <p>Quick overview in 2-3 sentences</p>
+                </div>
+              </div>
+
+              <div class="summery-box">
+                <input class="mt-2" type="radio" name="length" />
+                <div>
+                  <h6>Medium</h6>
+                  <p>Balanced summary with key points</p>
+                </div>
+              </div>
+
+              <div class="summery-box">
+                <input class="mt-2" type="radio" name="length" />
+                <div>
+                  <h6>Detailed</h6>
+                  <p>Comprehensive summary with context</p>
+                </div>
+              </div>
+
+              <button id="result-btn" class="btn result-btn mt-4">
+                <i class="fa-solid fa-bolt"></i> Generate Summary
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="col-6">
+          <div class="card p-4 shadow-sm h-100 text-center">
+            <h5 class="mb-4 text-start">
+              <i class="fa-solid fa-wand-magic-sparkles text-primary"></i>
+              AI Summary
+            </h5>
+
+            <div id="result-box">
+              <i class="fa-regular fa-star big-icon mb-3"></i>
+              <p class="text-muted">Your summary will appear here</p>
+              <small class="text-muted">
+                Paste an article and click "Generate Summary"
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>
