@@ -53,7 +53,7 @@
               <label class="form-label">Summary Length</label>
 
               <div class="summery-box">
-                <input class="mt-2" type="radio" name="length" checked />
+                <input class="mt-2" type="radio" name="length" checked value="short"/>
                 <div>
                   <h6>Short</h6>
                   <p>Quick overview in 2-3 sentences</p>
@@ -61,7 +61,7 @@
               </div>
 
               <div class="summery-box">
-                <input class="mt-2" type="radio" name="length" />
+                <input class="mt-2" type="radio" name="length" value="medium"/>
                 <div>
                   <h6>Medium</h6>
                   <p>Balanced summary with key points</p>
@@ -69,14 +69,14 @@
               </div>
 
               <div class="summery-box">
-                <input class="mt-2" type="radio" name="length" />
+                <input class="mt-2" type="radio" name="length" value="detailed"/>
                 <div>
                   <h6>Detailed</h6>
                   <p>Comprehensive summary with context</p>
                 </div>
               </div>
 
-              <button id="result-btn" class="btn result-btn mt-4">
+              <button id="result-btn" onclick="UpdateSummery()" class="btn result-btn mt-4" >
                 <i class="fa-solid fa-bolt"></i> Generate Summary
               </button>
             </div>
