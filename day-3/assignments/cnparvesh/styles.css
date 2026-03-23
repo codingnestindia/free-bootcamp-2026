@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f7fb;
+}
+
+.logo-box {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #5f6fff, #a855f7);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.title {
+  font-weight: 600;
+}
+.subtitle {
+  font-size: 14px;
+  color: gray;
+}
+
+.search-box,
+.filter-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.tag-btn {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.tag-btn.active {
+  background: linear-gradient(135deg, #5f6fff, #a855f7);
+  color: white;
+}
