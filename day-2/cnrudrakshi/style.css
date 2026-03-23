@@ -153,15 +153,9 @@ textarea {
 .result-box .heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
-}
-.output {
-  display: flex;
-  align-items: center;     
-  justify-content: center; 
-  text-align: center;
-   min-height: 400px;
 }
 .default {
   line-height: 1.5;
@@ -184,8 +178,17 @@ textarea {
     width: 60px;
     height: 60px;
 }
+#copy-btn{
+  padding: 6px 15px;
+  border-radius: 7px;
+  border: 1px solid gray;
+  background: white;
+}
+#copy-btn:hover{
+  background: rgb(244, 242, 242);
+}
 .output {
-  position: relative; /* ye zaruri hai button ke liye */
+  position: relative; 
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 12px;
@@ -194,19 +197,6 @@ textarea {
   line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
-}
-.copy-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: white;
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 6px 10px;
-  font-size: 14px;
-  border: 1px solid #d4d3d3;
 }
 .copy-btn:hover {
   background-color: #e3e2f5;

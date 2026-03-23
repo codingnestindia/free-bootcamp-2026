@@ -26,6 +26,8 @@ async function generateSummary() {
   const output = document.getElementById("output");
   const wordsCount = document.getElementById("wordsCount");
 
+  const copyBtn = document.getElementById("copy-btn");
+
   if (!text) {
     alert("Please paste article");
     return;
@@ -65,16 +67,28 @@ wordsCount.innerText = wordCount;
       const errText = await res.text();
       throw new Error(`HTTP ${res.status}: ${errText}`);
     }
-
     const data = await res.json();
     const summary = data.choices[0].message.content;
-
     output.innerText = summary;
-    output.innerHTML = ""; // clear old summary
+    output.innerHTML = "";
 
     new Typed('#output', {
       strings: [summary],
       typeSpeed: 15,
+      showCursor: false,
+      onComplete: () => {
+    const note = document.createElement("p");
+       note.style.marginTop = "15px";
+    note.style.fontSize = "0.9em";
+    note.style.color = "#1a3c6e";
+    note.style.padding = "10px";
+   note.style.border = "1px solid #7ec5ee";
+    note.style.borderRadius = "12px";
+    note.style.backgroundColor = "#e6f4ff";
+    note.style.boxShadow = "0 2px 6px rgba(0,0,0,0.1)";
+    note.innerText = "Note: This is a mock summary. To use real AI, replace the mock function with an actual API call to OpenAI or HuggingFace. See the code comments for implementation details.";
+    document.getElementById("output").appendChild(note);
+  }
     });
   } catch (err) {
     output.innerText = "Error: " + err.message;
@@ -84,8 +98,10 @@ wordsCount.innerText = wordCount;
   btn.disabled = false;
 }
 
+copyBtn.addEventListener("click", copyText);
+
   function copyText() {
-    const text = document.getElementById("output").innerText;
-    if (!text || text.startsWith("⚠️")) return alert("Nothing to copy yet!");
+    const text = document.getElementById("output").innerText.trim();
+    if (!text) return alert("Nothing to copy yet!");
     navigator.clipboard.writeText(text).then(() => alert("Copied!"));
   }
