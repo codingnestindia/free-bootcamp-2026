@@ -89,6 +89,7 @@ Integrate with any AI provider such as:
 
 * OpenAI API
 * HuggingFace Inference API
+* Pollination API key (https://enter.pollinations.ai/api/docs)
 
 Your application must:
 
