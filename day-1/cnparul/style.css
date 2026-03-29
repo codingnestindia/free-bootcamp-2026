@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background:#f5f6fa;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+    padding: 15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.wallet-icon{
+  background-color: purple;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px; 
+  margin-left: 50px;
+}
+
+.wallet-icon i{
+  color: white;
+  font-size: 30px;
+}
+.header-text p{
+color:#777;
+font-size:14px;
+}
+.container{
+margin:50px auto;
+max-width:1200px;
+}
+
+.total-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+   padding:20px;
+    margin-top: 10px;
+}
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+ display: flex;
+    flex-direction: column; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card i{
+    font-size:30px;
+    width:60px;
+border-radius: 8px;
+text-align: center;
+padding: 10px;
+    margin-bottom: 10px;
+}
+.total-cards b{
+    font-size: 30px;
+}
+.spending i{
+    background-color: rgb(235, 243, 247);
+    color:blue;
+}
+.calendar i{
+    background-color: rgb(243, 243, 243);
+    color:darkgreen;
+}
+.average i{
+    background-color:rgb(241, 225, 241);
+    color: rgb(184, 44, 184);
+}
+.transaction i{
+    background-color: rgb(241, 215, 206);
+    color: orangered;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.expenses-form{
+grid-column: 1;
+grid-row: 1;
+}
+
+.chart{
+grid-column: 1;
+grid-row: 2;
+margin: 20px;
+}
+
+.expense-history{
+grid-column: 2;
+grid-row: 1 / span 2;
+}
+.expenses-form{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 20px;
+}
+.form{
+    background: white;
+    padding: 30px;
+    width:450px;
+    border-radius: 10px;
+    text-align:left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.form h2{
+    margin: 10px;
+}
+.expenses-form input, .expenses-form select{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:14px;
+}
+.form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+.add {
+width: 100%;
+background:linear-gradient(to right,rgb(124, 111, 245),rgb(82, 12, 212));
+color: white;
+font-size: 15px;
+border-radius: 8px;
+padding: 8px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  border-style: none;
+}
+.add i{
+  font-size:18px;
+  margin: 3px;
+  }
+  .expense-history{
+    margin-top:30px;
+    padding-bottom: 30px;
+  }
+  .history{
+      
+    padding: 20px;
+    
+     background: white;
+    
+    width:650px;
+    
+    height:auto;
+    
+    border-radius: 10px;
+    text-align:center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+  .history h2,#p{
+    text-align: left;
+  }
+  #p{
+    border-bottom:1px solid  #333;
+  }
+  .display{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:40px;
+color:#777;
+
+}
+.display i{
+    color: green;
+    font-size: 30px;
+    
+}
+.chart{
+    margin: 30px;
+     background: white;
+    padding: 20px;
+    width:450px;
+    height:auto;
+    
+    border-radius: 10px;
+    text-align:center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.chart h2{
+    text-align: left;
+
+}
+.displaybox{
+    padding: 20px;
+    margin: 20px;
+}
+.displaybox i{
+    color: yellowgreen;
+background: rgb(198, 224, 145);
+    font-size:30px;
+    width:60px;
+border-radius: 8px;
+text-align: center;
+padding: 10px;
+
+}
+.no-data h4,.no-data p{
+margin: 10px;
+color:#777;
+}
+@media (max-width:900px){
+
+.container2{
+grid-template-columns:1fr;
+}
+
+.expense-history{
+grid-column:1;
+grid-row:auto;
+}
+
+.chart{
+grid-column:1;
+}
+
+.form{
+width:100%;
+}
+
+.history{
+width:100%;
+}
+
+.chart{
+width:100%;
+}
+
+}
