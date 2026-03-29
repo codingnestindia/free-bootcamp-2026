@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+  background: #f5f7fb;
+}
+.grey {
+  color: #ccc;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px;
+  gap: 20px;
+}
+.head{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin:10px;
+
+}
+.head .bi-stars{
+  color:white;
+  background:linear-gradient(rgb(56, 56, 179), rgb(248, 66, 248));
+  padding: 20px;
+  border-radius: 15px;
+}
+.left-box,
+.right-box {
+  width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+ box-shadow:0 0 10px rgb(0, 0,0,0.5);
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+  background: #f5ebeb;
+}
+.bi-stars-2{
+color:purple;
+}
+.bi-file-earmark-text{
+  color: purple;
+  
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.no-data{
+  margin-top: 200px;
+  text-align: center;
+  
+}
+.card:hover {
+  background: #f3f3f3;
+}
+
+#btn{
+  background:linear-gradient(to right,rgb(90, 110, 226),rgb(172, 68, 172));
+  color: white;
+  width: 100%;
+  margin: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  
+}
+.title{
+  font-size: 16px;
+  font-weight: bold;
+}
+.subtext{
+  color: gray;
+  font-weight: smaller;
+}
+.copy-btn{
+  background: rgb(122, 122, 224);
+  color:white;
+  width: 20%;
+  height: 30px;
+  margin: 25px;
+  border-radius: 10px;
+  border-style: none;
+  
+}
+
+
