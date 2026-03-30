@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body class="bs-body-color">
+  <header>
+    <nav class="navbar shadow-sm py-3">
+      <div class="container">
+
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- Icon -->
+          <i class="fa-solid fa-wallet bg-color text-white p-2 rounded-2" style="font-size: 25px;"></i>
+
+          <!-- Text -->
+          <div>
+            <h3 class="m-0 fs-4 fw-bold">Personal Finance Dashboard</h3>
+            <p class="text-secondary mb-0  p-font">
+              Track your expenses and visualize spending
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!-- cards -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3 mb-3 mb-sm-0 border-0">
+        <div class="card p-1 border-0">
+          <div class="card-body">
+            <i class="fa-solid fa-dollar-sign fs-5 text-primary  p-2 mb-2 rounded-3" style="background-color: #e8effb;"></i>
+            <p class="p-font text-secondary">Total Spending</p>
+            <div id="spendings" class="fw-bold fs-4 text-dark"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card p-1 border-0">
+          <div class="card-body">
+            <i class="fa-regular fa-calendar fs-5 text-success p-2 mb-2 rounded" style="background-color: #e8f8f0;"></i>
+            <p class="p-font text-secondary">This Month</p>
+            <div id="growth" class="fw-bold fs-4 text-dark"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="card p-1 border-0">
+          <div class="card-body">
+            <i class="fa-solid fa-arrow-trend-up fs-5 text-info  p-2 mb-2 rounded" style="background-color: #e6f7fa"></i>
+            <p class="p-font text-secondary">Avg. Transaction</p>
+            <div id="average" class="fw-bold fs-4 text-dark"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="card p-1 border-0">
+          <div class="card-body">
+            <i class="fa-regular fa-credit-card fs-5 text-danger p-2 mb-2 rounded" style="background-color: #fdecea"></i>
+            <p class="p-font text-secondary">Transactions</p>
+            <div id="transactions" class="fw-bold fs-4 text-dark"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- form -->
+  <div class="container mt-3">
+    <div class="row g-4">
+
+      <!-- LEFT SIDE (Form + Chart) -->
+      <div class="col-lg-4 col-12">
+
+        <!-- FORM -->
+        <form id="form" class="p-4 shadow-sm  rounded-3 bg-white mb-4">
+          <p class="fs-5 fw-bold">Add new Expense</p>
+
+          <div class="mb-3">
+            <label class="form-label p-font">Description</label>
+            <input id="titleInput" type="text" class="form-control" placeholder="e.g., Grocery Shopping">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label p-font">Amount (₹)</label>
+            <input id="amountInput" type="text" class="form-control" placeholder="0.00">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label p-font">Category</label>
+            <select id="dropdownSelector" class="form-select">
+              <option value="Food">Food</option>
+              <option value="Travel">Travel</option>
+              <option value="Bills">Bills</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Health Care">Health Care</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary bg-color border-0 w-100">
+            <i class="fa-solid fa-plus fs-6 p-1"></i>
+            Add New Expense
+          </button>
+        </form>
+
+        <!-- CHART -->
+        <div class="p-4 shadow-sm  rounded-3 bg-white">
+          <h3 class="fs-5 fw-bold">Spending by Category</h3>
+          <div id="noDataMessage" class="text-center text-secondary p-5" style="display: none;">
+            <div style="font-size: 30px;">📊</div>
+            <p class="m-0 fw-semibold">No data to display</p>
+            <small>Add expenses to see the chart</small>
+          </div>
+          <canvas id="categoryChart"></canvas>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE (TABLE) -->
+      <div class="col-lg-8 col-12">
+        <div class=" shadow-sm rounded-3 bg-white h-100">
+
+          <div class="border-bottom p-3">
+            <p class="fs-5 fw-bold m-0">Transaction History</p>
+            <p id="tableTransactionCount" class="text-secondary fs-6 m-0"></p>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle m-0">
+              <thead>
+                <tr>
+                  <th class="text-secondary fw-semibold table-font text-start">DATE</th>
+                  <th class="text-secondary fw-semibold table-font text-start">DESCRIPTION</th>
+                  <th class="text-secondary fw-semibold table-font text-start">CATEGORY</th>
+                  <th class="text-secondary fw-semibold table-font text-end">AMOUNT (₹)</th>
+                  <th class="text-secondary fw-semibold table-font text-end">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="expenseBody"></tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
