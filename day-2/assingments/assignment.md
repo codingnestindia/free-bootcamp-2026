@@ -286,18 +286,18 @@ Day 2 — AI Article Summarizer
 
 ## Validation Checklist
 
-* [ ] I have followed the UI provided in the Figma design
-* [ ] My project is placed inside the `day-2/<github-username>/` folder
-* [ ] The application runs correctly in the browser
-* [ ] I have used **HTML, CSS, and Vanilla JavaScript only**
-* [ ] I have integrated an **AI API (OpenAI or HuggingFace or Pollination)**
-* [ ] I have used **Fetch API with async/await**
-* [ ] I have implemented **loading states**
-* [ ] I have added **summary length options**
-* [ ] I have implemented **copy to clipboard functionality**
-* [ ] My code is properly formatted and readable
-* [ ] I have tested my application before submitting
-* [ ] I confirm that this is **my own work**
+* [✅] I have followed the UI provided in the Figma design
+* [✅] My project is placed inside the `day-2/<github-username>/` folder
+* [✅] The application runs correctly in the browser
+* [✅] I have used **HTML, CSS, and Vanilla JavaScript only**
+* [✅] I have integrated an **AI API (OpenAI or HuggingFace)**
+* [✅] I have used **Fetch API with async/await**
+* [✅] I have implemented **loading states**
+* [✅] I have added **summary length options**
+* [✅] I have implemented **copy to clipboard functionality**
+* [✅] My code is properly formatted and readable
+* [✅] I have tested my application before submitting
+* [✅] I confirm that this is **my own work**
 
 ---
 
