@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #1f2937;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo {
+  font-size: 30px;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.header h1 {
+  margin-top: 15px;
+  font-size: 28px;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  resize: none;
+}
+
+/* Words */
+.words {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 5px 0 10px;
+}
+
+/* Options */
+.option {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.option.active {
+  border: 2px solid #8b5cf6;
+}
+
+.option p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: white;
+  font-size: 14px;
+ 
+}
+
+/* Summary Box */
+.summary-box {
+  text-align: center;
+  margin-top: 60px;
+  color: #6b7280;
+}
+
+.summary-box .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+

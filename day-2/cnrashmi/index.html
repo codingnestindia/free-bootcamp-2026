@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Article Summarizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">✨</div>
+    <h1>AI Article Summarizer</h1>
+    <p>Transform long articles into concise summaries with AI-powered technology</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Left Box -->
+    <div class="card">
+      <h3>📄 Original Article</h3>
+
+      <label>Paste your article here</label>
+      <textarea id="article-input" placeholder="Paste a long article, blog post, or any text you want to summarize..."></textarea>
+
+      <p  id ="word-count"class="words">0 words</p>
+
+      <h4>Summary Length</h4>
+
+      <div class="option">
+        <input type="radio" name="length" value="short">
+        <div>
+          <h4>Short</h4>
+          <p>Quick overview in 2-3 sentences</p>
+        </div>
+      </div>
+
+      <div class="option active">
+        <input type="radio" name="length" value="medium" checked>
+        <div>
+          <h4>Medium</h4>
+          <p>Balanced summary with key points</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="length" value="detailed">
+        <div>
+          <h4>Detailed</h4>
+          <p>Comprehensive summary with context</p>
+        </div>
+      </div>
+
+      <button type="button" class="btn" onclick="generateSummary()"> Generate Summary</button>
+    </div>
+
+    <!-- Right Box -->
+    <div class="card">
+      <h3>✨ AI Summary</h3>
+
+      <div class="summary-box">
+        <div class="article-output"></div>
+        <p>Your summary will appear here</p>
+        <span>>Your summary will appear here</span>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</body>
+</html>
